@@ -3,28 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHADI & SERHAT</title>
-    <script src="./weddingapp/scripts/script.js"></script>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Hochzeitstisch-Finder</title>
 </head>
 <body>
-    <form id="searchForm">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" name="nameInput" required>
-        <button type="submit" onclick="searchGuest()">Suchen</button>
-    </form>
-
-    <table id="searchResults" style="display:none;">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>RSVP Status</th>
-                <th>Guest Count</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Search results will be inserted here -->
-        </tbody>
-    </table>
+    <h2>Hochzeitstisch-Finder</h2>
+    <input type="text" id="nameInput" placeholder="Namen eingeben">
+    <button onclick="findTable()">Suchen</button>
+    <p id="errorMessage" style="color: red; display: none;"></p>
 </body>
 </html>
