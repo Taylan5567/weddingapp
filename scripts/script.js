@@ -1,20 +1,39 @@
+const nameTable = {
+    "Taylan": 2,
+    "Mehmet": 3,
+    "Ali": 4
+};
 
-        const nameTable = {
-            "Taylan": 2,
-            "Mehmet": 3,
-            "Ali": 4
-        };
+function findTable() {
+    let name = document.getElementById("nameInput").value.trim();
 
-        function findTable() {
-            let name = document.getElementById("nameInput").value.trim();
-            let errorMessage = document.getElementById("errorMessage");
+    if (nameTable[name]) {
+        localStorage.setItem("tableResult", `Der Tisch für ${name} ist Tisch Nummer ${nameTable[name]}.`);
+    } else {
+        localStorage.setItem("tableResult", "Name nicht gefunden.");
+    }
 
-            if (nameTable[name]) {
-                // Name gefunden -> Weiterleitung zur Ergebnis-Seite mit URL-Parameter
-                window.location.href = `result.html?name=${encodeURIComponent(name)}&table=${nameTable[name]}`;
-            } else {
-                // Name nicht gefunden -> Fehlermeldung anzeigen
-                errorMessage.textContent = "Name nicht gefunden.";
-                errorMessage.style.display = "block";
-            }
+    // Weiterleiten zur Ergebnis-Seite
+    window.location.href = "./result.html";
+}
+
+function animateText(text, speed) {
+    let index = 0;
+    let element = document.getElementById('uberSchrift');
+    element.textContent = "";
+
+    function addLetter() {
+        if (index < text.length) {
+            element.textContent += text[index];
+            index++;
+            setTimeout(addLetter, speed);
+        } else {
+            cursor.style.display = "none"; // Cursor ausblenden nach der Animation
         }
+    }
+    addLetter();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    animateText("Shadi & Serhat", 100);
+});
