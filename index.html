@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+<script src="./scripts/script.js" defer></script>
 </head>
 <body>
-    <form class="container">
-        <h1 id="ueberSchrift"></h1>
-        <input type="text" id="nameInput" placeholder="Vornamen / Nachnamen eingeben" required>
-        <button id="submit">Tisch suchen</button>
-    </form>
+    <div class="container">
+        <div id="names"></div>
+        <input type="text" id="nameInput" placeholder="Vornamen oder Nachnamen eingeben" required>
+        <button id="submit" onclick="findTable()">Tisch suchen</button>
+        <div id="tableResult"></div>
+        <button id="goBack" onclick="goBack()">Zurück</button>
+    </div>
 </body>
-<script src="./scripts/script.js" defer></script>
 </html>
