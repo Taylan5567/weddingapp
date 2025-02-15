@@ -1,8 +1,12 @@
-const nameTable = {
-    "Taylan": 2,
-    "Mehmet": 3,
-    "Ali": 4
-};
+let nameTable = {};
+        fetch('../json/names.json')
+            .then(response => response.json())
+            .then(data => nameTable = data);
+
+            
+const inputDiv = document.getElementById("nameInput");
+
+
 
 function findTable() {
     let name = document.getElementById("nameInput").value.trim();
@@ -17,7 +21,7 @@ function findTable() {
     } else {
         resultDiv.innerText = "Name nicht gefunden.";
     }
-    
+
     inputField.style.display = "none";
     button.style.display = "none";
     namesDiv.style.display = "none";
@@ -50,4 +54,5 @@ function goBack() {
     document.getElementById("names").style.display = "block";
     document.getElementById("tableResult").style.display = "none";
     document.getElementById("goBack").style.display = "none";
+    inputDiv.value = "";    
 }
