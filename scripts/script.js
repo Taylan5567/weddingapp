@@ -17,8 +17,7 @@ function findTable() {
     } else {
         resultDiv.innerText = "Name nicht gefunden.";
     }
-
-    // Alles andere ausblenden
+    
     inputField.style.display = "none";
     button.style.display = "none";
     namesDiv.style.display = "none";
