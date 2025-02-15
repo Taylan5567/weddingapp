@@ -3,10 +3,7 @@ let nameTable = {};
             .then(response => response.json())
             .then(data => nameTable = data);
 
-            
 const inputDiv = document.getElementById("nameInput");
-
-
 
 function findTable() {
     let name = document.getElementById("nameInput").value.trim();
