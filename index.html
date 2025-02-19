@@ -11,12 +11,59 @@
 <script src="./scripts/script.js" defer></script>
 </head>
 <body>
+
+    <div class="loader-container" id="loader">
+        <div class="hearts">
+          <div class="heart">
+            <svg viewBox="0 0 512 512">
+              <path d="M462.3 62.7c-54.5-46.4-136-38.3-186.4 13.2L256 
+                       96.4l-19.9-20.5c-50.4-51.5-131.8-59.6-186.4-13.2
+                       -62.2 53-66.1 149.8-9.9 207.1l193.5 199.8c3.6 3.7
+                       8.5 5.7 13.7 5.7s10.1-2 13.7-5.7l193.5-199.8c56.2-57.3
+                       52.3-154.1-9.9-207.1z"/>
+            </svg>
+          </div>
+          <div class="heart">
+            <svg viewBox="0 0 512 512">
+              <path d="M462.3 62.7c-54.5-46.4-136-38.3-186.4 13.2L256 
+                       96.4l-19.9-20.5c-50.4-51.5-131.8-59.6-186.4-13.2
+                       -62.2 53-66.1 149.8-9.9 207.1l193.5 199.8c3.6 3.7
+                       8.5 5.7 13.7 5.7s10.1-2 13.7-5.7l193.5-199.8c56.2-57.3
+                       52.3-154.1-9.9-207.1z"/>
+            </svg>
+          </div>
+          <div class="heart">
+            <svg viewBox="0 0 512 512">
+              <path d="M462.3 62.7c-54.5-46.4-136-38.3-186.4 13.2L256 
+                       96.4l-19.9-20.5c-50.4-51.5-131.8-59.6-186.4-13.2
+                       -62.2 53-66.1 149.8-9.9 207.1l193.5 199.8c3.6 3.7
+                       8.5 5.7 13.7 5.7s10.1-2 13.7-5.7l193.5-199.8c56.2-57.3
+                       52.3-154.1-9.9-207.1z"/>
+            </svg>
+          </div>
+          <div class="heart">
+            <svg viewBox="0 0 512 512">
+              <path d="M462.3 62.7c-54.5-46.4-136-38.3-186.4 13.2L256 
+                       96.4l-19.9-20.5c-50.4-51.5-131.8-59.6-186.4-13.2
+                       -62.2 53-66.1 149.8-9.9 207.1l193.5 199.8c3.6 3.7
+                       8.5 5.7 13.7 5.7s10.1-2 13.7-5.7l193.5-199.8c56.2-57.3
+                       52.3-154.1-9.9-207.1z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    
     <div class="container">
-        <div id="names"></div>
+        <div id="names">Shadi & Serhat</div>
+        <div class="content">
+        <h1 class="ueberschrift" id="ueberschrift">Herzlich Willkommen</h1>
         <input type="text" id="nameInput" placeholder="Vornamen oder Nachnamen eingeben" required>
         <button id="submit" onclick="findTable()">Tisch suchen</button>
+        <div class="resultshow" id="resultshow">
+        </div>
         <div id="tableResult"></div>
         <button id="goBack" onclick="goBack()">Zurück</button>
+    </div>
     </div>
 </body>
 </html>
